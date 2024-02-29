@@ -7,10 +7,9 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 import NewPaper from '../components/NewPaper';
 
-type PostImageNavigationType =NativeStackNavigationProp<RoutStackParams, "Detail">
+
 function Home() {
   let {data,loading,error} = useFech()
-  const {navigate} = useNavigation<PostImageNavigationType>()
   const { articles, status } = data as article
   console.log(articles);
   
